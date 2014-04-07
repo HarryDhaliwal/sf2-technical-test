@@ -1,0 +1,13 @@
+{% if name is defined %}
+    <div class=""alert">Welcome {{ name }}</div>
+{% endif %}
+
+<form action="{{ path('login_login_result') }}" method="POST">
+
+    <input type="text" name="search_username">
+
+    <input type="submit" value="search">
+
+</form>
+
+<a href="{{ path('login_login_logout') }}">Logout</a>

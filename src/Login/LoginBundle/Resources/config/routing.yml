@@ -1,0 +1,15 @@
+login_login_homepage:
+    pattern:  /login
+    defaults: { _controller: LoginLoginBundle:Default:index }
+
+login_login_search:
+    pattern:  /search
+    defaults: { _controller: LoginLoginBundle:Default:search }
+
+login_login_result:
+    pattern:  /result
+    defaults: { _controller: LoginLoginBundle:Default:result }
+
+login_login_logout:
+    pattern:  /logout
+    defaults: { _controller: LoginLoginBundle:Default:logout }

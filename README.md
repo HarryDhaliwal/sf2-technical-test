@@ -41,3 +41,33 @@ https://api.github.com/users/USER_NAME/repos
 * Send the link to your forked GitHub project to your recruiter.
 
 *Good luck!**
+
+### Time
+* Time spent was approximately 3.5-4 hours
+* Broken down into ~1 hour setup and configuration, ~1.5 hours on the authentication component and ~1 hour on the Github request and unit tests.
+
+### Test Env. Setup
+* Available test pages
+..* app_dev.php/login
+..* app_dev.php/search
+..* app_dev.php/result
+
+* The following database/table is required for the login component
+--
+-- Database: `test`
+--
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(50) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+INSERT INTO `users` (`id`, `user_name`, `first_name`, `password`) VALUES
+(1, 'the_username', 'First', 'pass');
+
+### Extra Notes
+* Passwords are not encrypted on purpose to allow for easy manipulation for this test directly in the DB
+* Search and Result pages are only accessible after user has logged in
+* The results display is incomplete as I had run out of time
