@@ -47,15 +47,17 @@ https://api.github.com/users/USER_NAME/repos
 * Broken down into ~1 hour setup and configuration, ~1.5 hours on the authentication component and ~1 hour on the Github request and unit tests.
 
 ### Test Env. Setup
-* Available test pages
-..* app_dev.php/login
-..* app_dev.php/search
-..* app_dev.php/result
+**Available test pages**
+* app_dev.php/login
+* app_dev.php/search
+* app_dev.php/result
 
-* The following database/table is required for the login component
---
--- Database: `test`
---
+**The following database/table is required for the login component**
+
+
+```
+Database: `test`
+
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(15) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(50) NOT NULL,
@@ -66,6 +68,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `user_name`, `first_name`, `password`) VALUES
 (1, 'the_username', 'First', 'pass');
+```
 
 ### Extra Notes
 * Passwords are not encrypted on purpose to allow for easy manipulation for this test directly in the DB
